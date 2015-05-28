@@ -1,9 +1,141 @@
+body
+	font-family: Roboto, Helvetica Neue, Arial, sans-serif 
+	font-size: 12px 
+	line-height: 1.4
+	color: #718A96 
+a
+	color: #FF5722 
+	text-decoration: none
+	font-weight: 500 
+	+transition(all .1s linear)
+	&:hover
+		text-decoration: none
+		color: #000 
+
 // default layout
-.l
-	+clr
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+%layout
+	max-width: 940px 
+	margin: 0 auto
+	+r(990)
+		margin: 0 25px 
+	+r(700)
+		margin: 0 20px 
+.site
+	@extend %layout
+	min-height: 100% 
+	margin-bottom: -60px 
+	.site__in
+		display: table-cell
+		vertical-align: middle
+		width: 100% 
+		.site__in1
+			display: inline-block
+			
+	+r(700)
+		margin-bottom: 0
+		min-height: 0  
+	&:after
+		height: 60px 
+		display: block
+		content: ' '
+		+r(700)
+			display: none
+html,body
+	height: 100% 
+	+r(700)
+		height: auto 
+.footer
+	height: 60px 
+	background: url(../img/footer.png) repeat-x 0 100%
+	line-height: 20px 
+	overflow: hidden 
+	position: relative
+	+r(700)
+		height: auto 
+		text-align: center
+	.footer__in
+		@extend %layout
+		+rm(1000)
+			padding-top: 10px 
+	.footer__icon
+		position: absolute
+		left: 50%
+		bottom: 26px 
+		margin-left: -10px 
+		font-size: 25px 
+		+r(700)
+			position: static
+		+rm(1000)
+			bottom: 23px 
+.faino
+	float: left
+	width: 46% 
+	+r(700)
+		float: none
+		text-align: center
+		width: auto 
+		margin-bottom: 20px 
+	.faino__icon
+		font-size: 30px 
+		color: #B0BEC5 
+		display: inline-block
+		vertical-align: top
+		margin-right: 41px 
+		+transition(all .1s linear)
+		+r(700)
+			margin: 0 
+			display: block
+			margin-bottom: 36px 
+			margin-top: 60px 
+		+rm(1000)
+			vertical-align: middle
+			margin-right: 26px 
+		&:hover
+			color: #000 
+	.faino__text
+		display: inline-block
+		white-space: nowrap
+		vertical-align: top
+		+r(700)
+			white-space: normal
+			display: block
+		+rm(1000)
+			vertical-align: middle
+		span
+			display: block
+			text-indent: -1em 
+			+r(700)
+				text-indent: 0 
+			+rm(1000)
+				display: inline
+				text-indent: 0 
+
+.feedback
+	float: right
+	text-align: right
+	width: 46%
+	+r(700)
+		float: none
+		text-align: center
+		width: auto
+		margin-bottom: 26px 
+		margin-top: 17px 
+	span
+		+rm(1000)
+			display: inline-block
+			vertical-align: middle
+	&:before
+		+rm(1000)
+			content: ' '
+			display: inline-block
+			height: 30px 
+			vertical-align: middle
+	br
+		+rm(1000)
+			display: none
+
+	 
+
+	
+	
+	

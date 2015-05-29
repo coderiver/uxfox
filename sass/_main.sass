@@ -38,12 +38,17 @@ h1
 			position: absolute
 			right: 20px 
 			top: 50%
-			font-size: 14px 
-			margin-top: -8px  
-			+transition(all .1s linear)
+			font-size: 20px 
+			margin-top: -10px  
+			+transition(all .250s linear)
 			&.icon-ok,&.icon-error
 				top: 0 
 				opacity: 0 
+			&.icon-mail
+				font-size:  15px
+				margin-top: -8px 
+			&.icon-error
+				font-size: 17px 
 		input
 			+box
 			width: 100%
@@ -96,13 +101,19 @@ h1
 		font-size: 16px 
 		color: #fff 
 		+g(#FF8F02,#FF5A1F)
-		+transition(all .1s linear)
-		&[disabled]
+		+transition(all .25s linear)
+		&:hover
+			+g(#FF5822,#FF9000)
+		&:active
+			+g(#FE8F00,#DD2D00)
+		&[disabled],&[disabled]:hover,&[disabled]:active
 			background: #fff 
 			color: #FF5722 
 			border: 2px solid #FF8D00 
 			height: 50px 
+			line-height: 46px 
 			cursor: not-allowed
+		
 	.form__hint
 		opacity: 0
 		z-index: -1  
@@ -118,7 +129,7 @@ h1
 		text-align: center
 		border-radius: 4px
 		color: #fff 
-		+transition(all .2s linear)
+		+transition(all .25s linear)
 		&:before
 			content: ' '
 			width: 20px 

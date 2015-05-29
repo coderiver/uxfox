@@ -100,8 +100,10 @@ h1 span { display: none; }
 .form { width: 280px; margin: 0 auto; margin-bottom: -50px; }
 @media only screen and (max-width: 700px) { .form { margin-bottom: 58px; } }
 .form .form__input { position: relative; margin-bottom: 20px; }
-.form .form__input .form__icon { position: absolute; right: 20px; top: 50%; font-size: 14px; margin-top: -8px; -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; transition: all 0.1s linear; }
+.form .form__input .form__icon { position: absolute; right: 20px; top: 50%; font-size: 20px; margin-top: -10px; -webkit-transition: all 0.25s linear; -moz-transition: all 0.25s linear; -o-transition: all 0.25s linear; transition: all 0.25s linear; }
 .form .form__input .form__icon.icon-ok, .form .form__input .form__icon.icon-error { top: 0; opacity: 0; }
+.form .form__input .form__icon.icon-mail { font-size: 15px; margin-top: -8px; }
+.form .form__input .form__icon.icon-error { font-size: 17px; }
 .form .form__input input { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 48px; font-size: 16px; line-height: normal; padding-left: 20px; padding-right: 20px; border-radius: 4px; border: 1px solid #b0bec5; }
 .form .form__input input:-moz-placeholder, .form .form__input input::-moz-placeholder { color: #b0bec5; opacity: 1; }
 .form .form__input input::-webkit-input-placeholder { color: #b0bec5; }
@@ -115,9 +117,11 @@ h1 span { display: none; }
 .form .form__input.is-error .icon-error { top: 50%; opacity: 1; color: #f5a623; }
 .form .form__input.is-error input { box-shadow: inset 0 0 0 1px #f5a623; border-color: #f5a623; }
 .form .form__input.is-error .icon-mail, .form .form__input.is-error .icon-ok { top: 0; opacity: 0; }
-.form button, .form .form__button { border-radius: 4px; height: 50px; line-height: 50px; width: 280px; text-align: center; font-size: 16px; color: white; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff8f02), color-stop(100%, #ff5a1f)); background-image: -webkit-linear-gradient(#ff8f02, #ff5a1f); background-image: -moz-linear-gradient(#ff8f02, #ff5a1f); background-image: -o-linear-gradient(#ff8f02, #ff5a1f); background-image: linear-gradient(#ff8f02, #ff5a1f); -webkit-transition: all 0.1s linear; -moz-transition: all 0.1s linear; -o-transition: all 0.1s linear; transition: all 0.1s linear; }
-.form button[disabled], .form .form__button[disabled] { background: white; color: #ff5722; border: 2px solid #ff8d00; height: 50px; cursor: not-allowed; }
-.form .form__hint { opacity: 0; z-index: -1; position: absolute; top: -50px; top: -10px; left: 0; width: 280px; background: black; height: 30px; line-height: 30px; font-size: 12px; text-align: center; border-radius: 4px; color: white; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+.form button, .form .form__button { border-radius: 4px; height: 50px; line-height: 50px; width: 280px; text-align: center; font-size: 16px; color: white; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff8f02), color-stop(100%, #ff5a1f)); background-image: -webkit-linear-gradient(#ff8f02, #ff5a1f); background-image: -moz-linear-gradient(#ff8f02, #ff5a1f); background-image: -o-linear-gradient(#ff8f02, #ff5a1f); background-image: linear-gradient(#ff8f02, #ff5a1f); -webkit-transition: all 0.25s linear; -moz-transition: all 0.25s linear; -o-transition: all 0.25s linear; transition: all 0.25s linear; }
+.form button:hover, .form .form__button:hover { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff5822), color-stop(100%, #ff9000)); background-image: -webkit-linear-gradient(#ff5822, #ff9000); background-image: -moz-linear-gradient(#ff5822, #ff9000); background-image: -o-linear-gradient(#ff5822, #ff9000); background-image: linear-gradient(#ff5822, #ff9000); }
+.form button:active, .form .form__button:active { background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fe8f00), color-stop(100%, #dd2d00)); background-image: -webkit-linear-gradient(#fe8f00, #dd2d00); background-image: -moz-linear-gradient(#fe8f00, #dd2d00); background-image: -o-linear-gradient(#fe8f00, #dd2d00); background-image: linear-gradient(#fe8f00, #dd2d00); }
+.form button[disabled], .form button[disabled]:hover, .form button[disabled]:active, .form .form__button[disabled], .form .form__button[disabled]:hover, .form .form__button[disabled]:active { background: white; color: #ff5722; border: 2px solid #ff8d00; height: 50px; line-height: 46px; cursor: not-allowed; }
+.form .form__hint { opacity: 0; z-index: -1; position: absolute; top: -50px; top: -10px; left: 0; width: 280px; background: black; height: 30px; line-height: 30px; font-size: 12px; text-align: center; border-radius: 4px; color: white; -webkit-transition: all 0.25s linear; -moz-transition: all 0.25s linear; -o-transition: all 0.25s linear; transition: all 0.25s linear; }
 .form .form__hint:before { content: " "; width: 20px; height: 20px; background: black; position: absolute; z-index: -1; left: 50%; top: 14px; margin-left: -10px; transform: rotate(45deg); }
 
 .hint { font-size: 12px; line-height: 20px; width: 20%; float: left; }

@@ -80,7 +80,8 @@ head.ready(function() {
 	                'mintemail.com',
 	                'jetable.org',
 	                'dispostable.com',
-	                'spamgourmet.com'
+	                'spamgourmet.com',
+	                'mailforspam.com'
 	            ];
 
 	        function validateEmail(email) {

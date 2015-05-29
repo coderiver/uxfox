@@ -74,7 +74,8 @@ h1
 				border-color: #00B64F 
 		&.is-error
 			.form__hint
-				display: block
+				opacity: 1
+				top: -50px 
 			.icon-error
 				top: 50%
 				opacity: 1  
@@ -103,9 +104,11 @@ h1
 			height: 50px 
 			cursor: not-allowed
 	.form__hint
-		display: none
+		opacity: 0
+		z-index: -1  
 		position: absolute
 		top: -50px 
+		top: -10px
 		left: 0
 		width: 280px 
 		background: #000
@@ -115,6 +118,7 @@ h1
 		text-align: center
 		border-radius: 4px
 		color: #fff 
+		+transition(all .2s linear)
 		&:before
 			content: ' '
 			width: 20px 

@@ -95,11 +95,7 @@ h1
 	.test
 		height: 50px 
 		width: 300px 
-		+background-image(linear-gradient(#FF9100, #FF5A1F,#FF9100,#DD2c00))
-		-webkit-background-size: 380px 150px 
-		-o-background-size: 380px 150px 
-		background-size: 380px 150px 
-		+transition(all .1s cubic-bezier(0.645, 0.045, 0.355, 1))
+		
 		&:hover
 			background-position: 0 -50px 
 		&:active
@@ -112,13 +108,20 @@ h1
 		text-align: center
 		font-size: 16px 
 		color: #fff 
-		+g(#FF9100,#FF5A1F)
+		// +g(#FF9100,#FF5A1F)
 		-webkit-appearance: none
-		+transition(all 1s cubic-bezier(0.645, 0.045, 0.355, 1))
+		// +transition(all 1s cubic-bezier(0.645, 0.045, 0.355, 1))
+		+background-image(linear-gradient(#FF9100, #FF5A1F,#FF9100,#DD2c00))
+		-webkit-background-size: 380px 150px 
+		-o-background-size: 380px 150px 
+		background-size: 380px 150px 
+		+transition(all .250s cubic-bezier(0.645, 0.045, 0.355, 1))
 		&:hover
-			+g(#FF9100,#DD2c00)
+			// +g(#FF9100,#DD2c00)
+			background-position: 0 -100px 
 		&:active
-			+g(#FF5822,#FF9100)
+			// +g(#FF5822,#FF9100)
+			background-position: 0 -50px 
 		&[disabled],&[disabled]:hover,&[disabled]:active
 			background: #fff 
 			color: #FF5722 

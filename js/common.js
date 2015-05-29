@@ -15,6 +15,9 @@ head.ready(function() {
 		}
 	});
 	inp.blur(function(event) {
+		if(inp.val()=='' || inp.val()=='Ваш e-mail'){
+			return false
+		}
 		if(isvalid()){
 			ok();
 		}else{

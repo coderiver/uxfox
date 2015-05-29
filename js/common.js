@@ -10,7 +10,8 @@ head.ready(function() {
 		if(isvalid()){
 			ok();
 		}else{
-			but.prop("disabled", true)
+			but.prop("disabled", true);
+			fi.removeClass('is-ok');
 		}
 	});
 	inp.blur(function(event) {

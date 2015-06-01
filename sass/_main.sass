@@ -9,6 +9,8 @@ h1
 	-webkit-text-fill-color: transparent
 	span
 		display: none
+	+rm(1200)
+		font-size: (100*40/1200) + vw
 .title
 	font-weight: 700
 	color: #1D1D1D  
@@ -16,12 +18,16 @@ h1
 	margin-bottom: 21px 
 	text-align: center
 	font-size: 32px 
+	+rm(1200)
+		font-size: (100*32/1200) + vw 
 .subtitle
 	font-size: 16px 
 	color: #718A96 
-	line-height: 19px
+	line-height: (19/16)
 	text-align: center 
 	margin-bottom: 70px 
+	+rm(1200)
+		font-size: (100*16/1200) + vw 
 .top-part
 	+clr
 	margin-bottom: 70px 
@@ -31,6 +37,8 @@ h1
 	margin-bottom: -50px 
 	+r(700)
 		margin-bottom: 58px 
+	+rm(1200)
+		width: (100*280/1200) + vw 
 	.form__input
 		position: relative
 		margin-bottom: 20px 
@@ -92,14 +100,6 @@ h1
 			.icon-mail,.icon-ok
 				top: 0
 				opacity: 0  
-	.test
-		height: 50px 
-		width: 300px 
-		
-		&:hover
-			background-position: 0 -50px 
-		&:active
-			background-position: 0 -100px 
 	button,.form__button
 		border-radius: 4px 
 		height: 50px 
@@ -108,20 +108,47 @@ h1
 		text-align: center
 		font-size: 16px 
 		color: #fff 
-		// +g(#FF9100,#FF5A1F)
+		+g(#FF9100,#FF5A1F)
 		-webkit-appearance: none
 		// +transition(all 1s cubic-bezier(0.645, 0.045, 0.355, 1))
-		+background-image(linear-gradient(#FF9100, #FF5A1F,#FF9100,#DD2c00))
-		-webkit-background-size: 380px 150px 
-		-o-background-size: 380px 150px 
-		background-size: 380px 150px 
-		+transition(all .250s cubic-bezier(0.645, 0.045, 0.355, 1))
+		// +background-image(linear-gradient(#FF9100, #FF5A1F,#FF9100,#DD2c00))
+		// -webkit-background-size: 380px 150px 
+		// -o-background-size: 380px 150px 
+		// background-size: 380px 150px 
+		+transition(background .250s cubic-bezier(0.645, 0.045, 0.355, 1))
+		position: relative
+		span
+			position: relative
+			z-index: 100 
+		+rm(1200)
+			width: (100*280/1200) + vw 
 		&:hover
 			// +g(#FF9100,#DD2c00)
-			background-position: 0 -100px 
+			// background-position: 0 -100px 
+			&:after
+				opacity: 1 
 		&:active
 			// +g(#FF5822,#FF9100)
-			background-position: 0 -50px 
+			// background-position: 0 -50px 
+			&:before
+				opacity: 1 
+				z-index: 2 
+		&:before,&:after
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: red     
+			content: ' '
+			z-index: 1
+			opacity: 0
+			+transition(opacity .250s cubic-bezier(0.645, 0.045, 0.355, 1)) 
+			border-radius: 4px 
+		&:before
+			+g(#FF5822,#FF9100)
+		&:after
+			+g(#FF9100,#DD2c00)
 		&[disabled],&[disabled]:hover,&[disabled]:active
 			background: #fff 
 			color: #FF5722 
@@ -130,6 +157,8 @@ h1
 			line-height: 46px 
 			cursor: not-allowed
 			opacity: 1 
+			&:before,&:after
+				display: none
 		
 	.form__hint
 		opacity: 0
@@ -161,7 +190,7 @@ h1
 			transform: rotate(45deg)
 .hint
 	font-size: 12px 
-	line-height: 20px
+	line-height: (20/12)
 	width: 20%  
 	float: left
 	&.hint_right
@@ -175,6 +204,8 @@ h1
 		float: none
 		text-align: center
 		width: auto
+	+rm(1200)
+		font-size: (100*12/1200) + vw 
 .features
 	+clr
 .feature
@@ -205,15 +236,27 @@ h1
 		text-transform: uppercase  
 		margin-bottom: 10px 
 		// margin-top: 10px 
+		+rm(1200)
+			font-size: (100*14/1200) + vw 
+			margin-bottom: (100*10/1200) + vw 
 	.feature__icon
 		font-size: 43px 
 		color: #000 
 		min-height: 59px 
+		+rm(1200)
+			font-size: (100*43/1200) + vw 
+			min-height: (100*59/1200) + vw 
 		&.icon-useful
 			font-size: 34px 
 			position: relative
 			top: 6px  
+			+rm(1200)
+				font-size: (100*34/1200) + vw 
+				top: (100*6/1200) + vw 
+				
 	p
 		font-size: 14px 
 		line-height: (20/14)
 		margin-right: 10px 
+		+rm(1200)
+			font-size: (100*14/1200) + vw 

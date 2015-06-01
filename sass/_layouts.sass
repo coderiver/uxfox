@@ -19,7 +19,10 @@ a
 	+r(990)
 		margin: 0 25px 
 	+r(700)
-		margin: 0 20px 
+		margin: 0 20px
+	+rm(1200) 
+		margin: 0 auto 
+		max-width: percentage(940/1200)
 .site
 	@extend %layout
 	min-height: 100% 
@@ -50,6 +53,8 @@ html,body
 	line-height: 20px 
 	overflow: hidden 
 	position: relative
+	+rm(1200)
+		height: (100*60/1200) + vw 
 	+r(700)
 		height: auto 
 		text-align: center
@@ -68,6 +73,10 @@ html,body
 			position: static
 		+rm(1000)
 			bottom: 23px 
+		+rm(1200)
+			bottom: (100*26/1200) + vw 
+			margin-left: -(100*10/1200) + vw 
+			font-size: (100*25/1200) + vw 
 .faino
 	float: left
 	width: 46% 
@@ -83,6 +92,9 @@ html,body
 		vertical-align: top
 		margin-right: 41px 
 		+transition(all .1s linear)
+		+rm(1200)
+			font-size: (100*30/1200) + vw 
+			margin-right: (100*41/1200) + vw  
 		+r(700)
 			margin: 0 
 			display: block
